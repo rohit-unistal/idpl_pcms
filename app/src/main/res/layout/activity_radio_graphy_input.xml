@@ -1,0 +1,2354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".radio_graphy.RadioGraphyInput">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Report For RadioGraphy"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/holo_green_dark"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/netstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_20sdp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--Date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:text="Date *"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+                <TextView
+                    android:id="@+id/edit_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:hint="Date"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:background="@drawable/txt_view_bg"
+                    android:layout_weight=".5"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+            <!--ReportNo.-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_repo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Report Number *"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_reportno"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:hint="Report Number"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--AlignSheetNo.-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Align Sheet No. *"
+                    android:layout_weight=".5"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <Spinner
+                        android:id="@+id/spin_alignment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/edit_chainageto"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+
+                    android:text="Weather"
+                    android:layout_weight=".5"
+                    android:textColor="@android:color/black"
+
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <Spinner
+                        android:id="@+id/edWeather"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Weather"
+                        android:inputType="text"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center_vertical"
+                        android:text="Joint Number"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5">
+                        <EditText
+                            android:id="@+id/edJointNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:editable="false"
+                            android:textColor="@android:color/black"
+                            android:enabled="false"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="@dimen/_12sdp"
+                            android:inputType="textCapWords"
+                            android:background="@null"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--KiloMeter.-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center_vertical"
+                        android:text="KM *"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+                        <EditText
+                            android:id="@+id/edKM"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="KM"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:inputType="number"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="@dimen/_12sdp"
+                            android:background="@null"
+                            tools:ignore="RtlSymmetry" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--JointType.-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center_vertical"
+                        android:text="Joint Type *"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+                        <Spinner
+                            android:id="@+id/spinerJointType"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--JointNo-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center_vertical"
+                        android:text="Joint No. *"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+                        <EditText
+                            android:id="@+id/edJointNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Jonit No."
+                            android:paddingStart="@dimen/_10sdp"
+                            android:inputType="text"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="@dimen/_12sdp"
+                            android:background="@null"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--SuffixFRom-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center_vertical"
+                        android:text="Suffix"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+                        <EditText
+                            android:id="@+id/edSuffixFrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Suffix"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:fontFamily="sans-serif-light"
+                            android:inputType="text"
+                            android:textSize="@dimen/_12sdp"
+                            android:background="@null"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--Segment1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:checked="false"
+                    android:layout_weight=".6"
+                    android:textSize="@dimen/_12sdp"
+                    android:checkMark="?android:attr/textCheckMark"
+                    android:text="Segment 1*"/>
+                <RadioGroup
+                    android:id="@+id/rgSegment1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight=".4"
+                    android:gravity="center|end"
+                    android:weightSum="1">
+                    <RadioButton
+                        android:id="@+id/seg1Accept"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@android:color/black"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Accept"/>
+                    <RadioButton
+                        android:id="@+id/seg1Reject"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@android:color/black"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Reject"/>
+
+
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_observe"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Observation 1 "
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_observe"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:hint="Observation 1"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Segment2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:checked="false"
+                    android:layout_weight=".6"
+                    android:textSize="@dimen/_12sdp"
+                    android:checkMark="?android:attr/textCheckMark"
+                    android:text="Segment 2 *"/>
+                <RadioGroup
+                    android:id="@+id/rgSegment2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight=".4"
+                    android:gravity="center|end"
+                    android:weightSum="1">
+                    <RadioButton
+                        android:id="@+id/seg2Accept"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@android:color/black"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Accept"/>
+                    <RadioButton
+                        android:id="@+id/seg2Reject"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@android:color/black"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Reject"/>
+
+
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_observe2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Observation 2 "
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_observe2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:hint="Observation 2"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Segment3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:checked="false"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_weight=".6"
+                    android:checkMark="?android:attr/textCheckMark"
+                    android:text="Segment 3 *"/>
+                <RadioGroup
+                    android:id="@+id/rgSegment3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight=".4"
+                    android:gravity="center|end"
+                    android:weightSum="1">
+                    <RadioButton
+                        android:id="@+id/seg3Accept"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@android:color/black"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Accept"/>
+                    <RadioButton
+                        android:id="@+id/seg3Reject"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@android:color/black"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Reject"/>
+
+
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_observe3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Observation 3"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_observe3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:hint="Observation"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Segment4-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:checked="false"
+                    android:layout_weight=".6"
+                    android:textSize="@dimen/_12sdp"
+                    android:checkMark="?android:attr/textCheckMark"
+                    android:text="Segment 4 *"/>
+                <RadioGroup
+                    android:id="@+id/rgSegment4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight=".4"
+                    android:gravity="center|end"
+                    android:weightSum="1">
+                    <RadioButton
+                        android:id="@+id/seg4Accept"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@android:color/black"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Accept"/>
+                    <RadioButton
+                        android:id="@+id/seg4Reject"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@android:color/black"
+                        android:layout_weight=".5"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Reject"/>
+
+
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_observe4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Observation 4 "
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_observe4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:hint="Observation"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="RootRepair 1"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edRootRepair"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Root Welders 1"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_rootwelders1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Hot pass 1"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edHotPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Hot Welders1"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_hotwelders1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Filler 1"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edFiller1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Filler Welders 1"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_fillerwelders1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Capping 1"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edcapping"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Capping Welders1"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_cappingwelders1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="RootRepair 2"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edRootRepair2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Root Welders 2"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_rootwelders2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Hot pass 2"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edHotPass2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Hot Welders2"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_hotwelders2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Filler 2"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edFiller2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Filler Welders 2"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_fillerwelders2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Capping 2"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edcapping2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Capping Welders2"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_cappingwelders2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="RootRepair 3"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edRootRepair3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Root Welders 3"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_rootwelders3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Hot pass 3"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edHotPass3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Hot Welders 3"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_hotwelders3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Filler 3"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edFiller3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Filler Welders 3"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_fillerwelders3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Capping 3"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edcapping3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Capping Welders 3"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_cappingwelders3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="RootRepair 4"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edRootRepair4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Root Welders 4"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_rootwelders4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Hot pass 4"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edHotPass4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Hot Welders 4"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_hotwelders4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Filler 4"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edFiller4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Filler Welders 4"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_fillerwelders4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Capping 4"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edcapping4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Capping Welders4"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <Spinner
+                        android:id="@+id/edit_cappingwelders4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_penetrameter"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="penetrameter "
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_penetrameter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_sensitivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="sensitivity"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_sensitivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_gray_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="gray_value"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_gray_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_thickness"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="thickness"
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_thickness"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_ChainageFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="ChainageFrom "
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_ChainageFrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_ChaninageTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="ChaninageTo "
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_ChainageTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                       android:inputType="numberDecimal"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="source "
+                    android:layout_weight=".5"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <Spinner
+                        android:id="@+id/spinfilmtype"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:inputType="text"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+
+                    android:text="Film Type"
+                    android:layout_weight=".5"
+                    android:textColor="@android:color/black"
+
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                    <EditText
+                        android:id="@+id/edit_source"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <CheckedTextView
+                    android:id="@+id/txtResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:checked="false"
+                    android:textSize="@dimen/_12sdp"
+                    android:checkMark="?android:attr/textCheckMark"
+                    android:text="Result *"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="@dimen/_35sdp">
+                <TextView
+                    android:id="@+id/txtTakePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Take Photo"
+                    android:visibility="gone"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/txt_view_bg"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="sans-serif-light"
+                    android:drawableLeft="@android:drawable/ic_menu_camera"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                >
+                <TextView
+                    android:id="@+id/txt_Photo"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Photo"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_14sdp"
+
+                    />
+
+
+                <ImageView
+                    android:id="@+id/imgPhoto"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:gravity="right"
+                    android:layout_gravity="right"
+                    app:fontFamily="sans-serif"
+                    android:textSize="@dimen/_12sdp"
+                    android:src="@android:drawable/ic_menu_camera"
+
+                    android:imeOptions="actionDone"
+                    />
+            </LinearLayout>
+            <!--Spread-->
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Spread *"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edSpread"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Spread"
+                        android:fontFamily="sans-serif-light"
+                        android:textSize="@dimen/_12sdp"
+                        android:inputType="number"
+                        android:background="@null"/>
+                </LinearLayout>
+
+            </LinearLayout>-->
+
+            <!--AlignSheetNo.-->
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Align Sheet No. *"
+                    android:layout_weight=".5"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <Spinner
+                        android:id="@+id/spin_alignment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/edit_chainageto"
+                        />
+                </LinearLayout>
+            </LinearLayout>-->
+            <!--Weather-->
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Weather*"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edWeather"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Weather"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="text"
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>-->
+
+            <!--Chainage-->
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Chainage"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <EditText
+                        android:id="@+id/edit_chainage"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint="Chainage"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>-->
+
+            <!--PipeNumber-->
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight=".5"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:text="Pipe Number"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <EditText
+                        android:id="@+id/edit_PipeNo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint="Pipe No"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:inputType="numberDecimal"
+                        tools:ignore="Autofill,HardcodedText" />
+                </LinearLayout>
+
+            </LinearLayout>-->
+
+            <!--Length-->
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Length (mtr) *"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edit_sec_length"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:hint="Length"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:editable="false"
+                        android:background="@null"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+            </LinearLayout>-->
+
+
+            <!--Remark-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:text="Remark"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:minHeight="@dimen/_35sdp"
+                    android:background="@drawable/txt_view_bg">
+
+                    <EditText
+                        android:id="@+id/edit_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="@dimen/_5sdp"
+                        android:gravity="left"
+                        android:hint="Remark "
+                        android:imeOptions="actionDone"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif-light" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnSubmit"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:text="Submit"
+                android:textColor="@color/text_white"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:gravity="center"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Power by Unistal.com"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

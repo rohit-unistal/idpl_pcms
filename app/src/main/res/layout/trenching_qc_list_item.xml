@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/layoutListItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/_5sdp"
+    android:paddingLeft="@dimen/_5sdp"
+    android:background="@drawable/txt_view_bg"
+    tools:ignore="RtlHardcoded,RtlSymmetry">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingTop="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TrenchingDate"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:id="@+id/txtAlignment_SheetNo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingTop="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TrenchingUpperWidth"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:id="@+id/txttrenchupperwidth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingTop="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TrenchingDepth"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:id="@+id/txttrenchdepth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TrenchingDistance"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:id="@+id/txtLength"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="JointFrom"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:id="@+id/txtJointFrom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtView6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="JointTo"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:id="@+id/txtjointto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtView7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Chainage From"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:id="@+id/txtFromChainage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtView8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Chainage TO"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:id="@+id/txtToChainage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtView11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TypeTerrain"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:id="@+id/txtTypeTerrain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtView12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TrenchingLowerWidth"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:id="@+id/txtTrenchingLowerWidth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtView14"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Remarks"
+            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:id="@+id/txtRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+
+</LinearLayout>

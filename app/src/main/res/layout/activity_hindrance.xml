@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:background="@android:color/white"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fade_color">
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/_5sdp"
+
+            android:src="@drawable/ic_arrow_back_black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hindrance Report"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@android:color/holo_green_dark"
+        android:fontFamily="sans-serif-light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    </LinearLayout>
+        <ImageView
+        android:id="@+id/netstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_activityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight=".5"
+
+                    android:gravity="center_vertical"
+                    android:text="Activity Affected"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:fontFamily="sans-serif" />
+
+                <Spinner
+                    android:id="@+id/edit_activityeffected"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+
+                    android:background="@android:drawable/edit_text"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+
+                    android:textSize="@dimen/_12sdp"
+                    app:fontFamily="sans-serif"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:text="Report Date*"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    app:fontFamily="sans-serif"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <TextView
+                    android:id="@+id/edit_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:hint="Date"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5"
+                    app:fontFamily="sans-serif"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center_vertical"
+                    android:text="Chainage From*"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5">
+                    <EditText
+                        android:id="@+id/edit_chaingefrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint="Chainage From"
+                        android:textSize="@dimen/_12sdp"
+                        app:fontFamily="sans-serif"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:textColor="@color/text_color"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_chaingeto"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center_vertical"
+                    android:text="Chainage To*"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:fontFamily="sans-serif" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edit_chainageto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:gravity="center_vertical"
+                        android:hint="Chainage To"
+                        android:background="@null"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_areahold"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center_vertical"
+                    android:text="Area Hold"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    app:fontFamily="sans-serif" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <EditText
+                        android:id="@+id/edit_areahold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:gravity="center_vertical"
+                        android:hint="Area hold"
+                        android:background="@null"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center_vertical"
+                    android:text="Description"
+                    android:layout_weight=".5"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+
+                    <Spinner
+                        android:id="@+id/spinDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_fromdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:text="Date From*"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    app:fontFamily="sans-serif"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <TextView
+                    android:id="@+id/edit_datefrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+                    android:hint="Date"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5"
+                    app:fontFamily="sans-serif"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+                <TextView
+                    android:id="@+id/txt_todate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:text="Date To"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    app:fontFamily="sans-serif"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <TextView
+                    android:id="@+id/edit_dateto"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:gravity="center_vertical"
+
+                    android:paddingStart="@dimen/_10sdp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight=".5"
+                    app:fontFamily="sans-serif"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                    android:visibility="gone"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="Duration"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:minHeight="@dimen/_35sdp"
+                    android:visibility="gone"
+                    android:background="@android:drawable/editbox_background">
+
+                    <EditText
+                        android:id="@+id/edit_duration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="Duration"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="Weather"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <Spinner
+                        android:id="@+id/edit_weather"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:gravity="center_vertical"
+                        android:hint="weather"
+                        android:background="@null"
+                        android:imeOptions="actionDone"
+
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="Remark"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:minHeight="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background">
+
+                    <EditText
+                        android:id="@+id/edit_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="Remark "
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_responsibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="Responsibility"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:minHeight="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background">
+
+                    <Spinner
+                        android:id="@+id/edit_responsibility"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="Responsibility "
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:text="Status"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:minHeight="@dimen/_35sdp"
+                    android:background="@android:drawable/editbox_background">
+
+                    <EditText
+                        android:id="@+id/edit_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_weight=".5"
+                        android:gravity="left"
+                        android:hint="Status"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="sans-serif" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="@dimen/_35sdp">
+                <TextView
+                    android:id="@+id/txtTakePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+
+                    android:background="@drawable/txt_view_bg"
+                    android:text="Take Photo"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="sans-serif-light"
+                    android:drawableLeft="@android:drawable/ic_menu_camera"/>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/btnSubmit"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:text="Submit"
+                android:textColor="@color/text_white"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

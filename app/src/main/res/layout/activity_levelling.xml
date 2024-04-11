@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Levelling"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/holo_green_dark"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/netstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/accuracytv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_gravity="left"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_20sdp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--Date-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:text="Date *"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/edit_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:hint="Date"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="RtlSymmetry" />
+            </LinearLayout>
+            <!--ReportNo.-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_repo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:text="Report Number *"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+
+                    <EditText
+                        android:id="@+id/edit_reportno"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center|left"
+                        android:hint="Report Number"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+
+                    android:text="Weather"
+                    android:layout_weight=".5"
+                    android:textColor="@android:color/black"
+
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg">
+                <Spinner
+                        android:id="@+id/edWeather"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Weather"
+                        android:inputType="text"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Align Sheet No."
+                    android:layout_weight=".5"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:background="@android:drawable/editbox_background">
+                    <Spinner
+                        android:id="@+id/spinnerAlgnSheetNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Align Sheet No."
+                        android:textSize="@dimen/_12sdp"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Joint Number"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5">
+
+                        <EditText
+                            android:id="@+id/edJointNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:fontFamily="sans-serif-light"
+                            android:inputType="textCapWords"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--KiloMeter.-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="KM *"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edKM"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="KM"
+                            android:inputType="number"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp"
+                            tools:ignore="RtlSymmetry" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--JointType.-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Joint Type *"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <Spinner
+                            android:id="@+id/spinerJointType"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--JointNo-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Joint No. *"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edJointNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Joint No."
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--SuffixFRom-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Suffix"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edSuffix"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Suffix"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="sans-serif-light"
+
+                        android:text="Chainage From"
+                        android:layout_weight=".5"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@android:drawable/editbox_background"
+                        android:layout_weight=".5">
+                        <EditText
+                            android:id="@+id/edit_chaingefrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:hint="Chainage From"
+                            android:textSize="@dimen/_12sdp"
+                            app:fontFamily="sans-serif"
+                            android:layout_weight=".5"
+                            android:background="@null"
+                            android:textColor="@color/text_color"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="invisible"
+                    android:weightSum="1">
+                    <TextView
+                        android:id="@+id/txt_chaingeto"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="sans-serif-light"
+
+                        android:text="Chainage To"
+                        android:layout_weight=".5"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@android:drawable/editbox_background">
+                        <EditText
+                            android:id="@+id/edit_chainageto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:gravity="center_vertical"
+                            android:hint="Chainage To"
+                            android:background="@null"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_12sdp"
+                            app:fontFamily="sans-serif" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="sans-serif-light"
+
+                        android:text="Pipe Dia"
+                        android:layout_weight=".5"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@android:drawable/editbox_background"
+                        android:layout_weight=".5">
+                        <EditText
+                            android:id="@+id/edit_pipedia"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:hint="Pipe Dia"
+                            android:textSize="@dimen/_12sdp"
+                            app:fontFamily="sans-serif"
+                            android:layout_weight=".5"
+                            android:background="@null"
+                            android:textColor="@color/text_color"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="sans-serif-light"
+
+                        android:text="Pipe Thick"
+                        android:layout_weight=".5"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@android:drawable/editbox_background"
+                        android:layout_weight=".5">
+                        <EditText
+                            android:id="@+id/edit_pipethick"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:hint="Pipe Thick"
+                            android:textSize="@dimen/_12sdp"
+                            app:fontFamily="sans-serif"
+                            android:layout_weight=".5"
+                            android:background="@null"
+                            android:textColor="@color/text_color"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="sans-serif-light"
+
+                        android:text="TP No"
+                        android:layout_weight=".5"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@android:drawable/editbox_background"
+                        android:layout_weight=".5">
+                        <EditText
+                            android:id="@+id/edit_tpno"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+
+                            android:textSize="@dimen/_12sdp"
+                            app:fontFamily="sans-serif"
+                            android:layout_weight=".5"
+                            android:background="@null"
+                            android:textColor="@color/text_color"
+                             />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:weightSum="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="sans-serif-light"
+
+                        android:text="Lowered Section Length"
+                        android:layout_weight=".5"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_12sdp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@android:drawable/editbox_background"
+                        android:layout_weight=".5">
+                        <EditText
+                            android:id="@+id/edit_lowered_sec_length"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+
+                            android:textSize="@dimen/_12sdp"
+                            app:fontFamily="sans-serif"
+                            android:layout_weight=".5"
+                            android:background="@null"
+                            android:textColor="@color/text_color"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="From Joint Number "
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5">
+
+                        <EditText
+                            android:id="@+id/edJointNumberFrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:fontFamily="sans-serif-light"
+                            android:inputType="textCapWords"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="KM *"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edKMFrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="KM"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp"
+                            tools:ignore="RtlSymmetry" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--JointType.-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Joint Type *"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <Spinner
+                            android:id="@+id/spinerJointTypeFrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--JointNo-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Joint No. *"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edJointNoFrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Joint No."
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--SuffixFRom-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Suffix From"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edSuffixFrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Suffix"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="To Joint Number "
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5">
+
+                        <EditText
+                            android:id="@+id/edJointNumberTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:editable="false"
+                            android:enabled="false"
+                            android:fontFamily="sans-serif-light"
+                            android:inputType="textCapWords"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="KM *"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edKMTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="KM"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp"
+                            tools:ignore="RtlSymmetry" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--JointType.-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Joint Type *"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <Spinner
+                            android:id="@+id/spinerJointTypeTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-light" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--JointNo-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Joint No. *"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edJointNoTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Joint No."
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--SuffixFRom-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Suffix"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edSuffixTo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Suffix"
+                            android:inputType="text"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Cover*"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edCover"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Cover"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Cover-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:id="@+id/btnNGL"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_gravity="center"
+
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="NGL Location"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/text_white" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="NGL"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edNGL"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+
+
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:id="@+id/btnLocation"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_gravity="center"
+
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Location"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/text_white" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Easting"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edEasting"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Easting"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Cover-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="Northing"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edNorthing"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="Northing"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--Cover-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight=".5"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_vertical"
+                        android:text="PipeTop"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/txt_view_bg">
+
+                        <EditText
+                            android:id="@+id/edPipeTop"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:fontFamily="sans-serif-light"
+                            android:hint="PipeTop"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Cover-->
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                >
+                <TextView
+                    android:id="@+id/txt_Photo"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Photo"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_14sdp"
+
+                    />
+
+
+                <ImageView
+                    android:id="@+id/imgPhoto"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:gravity="right"
+                    android:layout_gravity="right"
+                    app:fontFamily="sans-serif"
+                    android:textSize="@dimen/_12sdp"
+                    android:src="@android:drawable/ic_menu_camera"
+
+                    android:imeOptions="actionDone"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtTakePhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:background="@drawable/txt_view_bg"
+                    android:drawableLeft="@android:drawable/ic_menu_camera"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Take Photo"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+            <!--Remark-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight=".5"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:text="Remark"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/txt_view_bg"
+                    android:minHeight="@dimen/_35sdp">
+
+                    <EditText
+                        android:id="@+id/edit_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="left"
+                        android:hint="Remark "
+                        android:imeOptions="actionDone"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnSubmit"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="Submit"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Power by Unistal.com"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

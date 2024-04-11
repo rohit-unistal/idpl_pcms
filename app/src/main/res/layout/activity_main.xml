@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:padding="@dimen/_10sdp">
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/text_header"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:gravity="center_horizontal"
+
+            app:fontFamily="sans-serif"
+            android:text="Clearing &amp; Grading"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <!-- <TextView
+             android:id="@+id/txt_pipeline"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Copy:"
+             app:fontFamily="sans-serif"
+             android:textColor="@color/text_color"
+             android:textSize="@dimen/_10sdp"
+             app:layout_constraintBottom_toBottomOf="@+id/lvPipeLine"
+             app:layout_constraintRight_toLeftOf="@+id/lvPipeLine"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="@+id/lvPipeLine" />
+         <ListView
+             android:id="@+id/lvPipeLine"
+             android:layout_width="300dp"
+             android:layout_height="200dp"
+             android:nestedScrollingEnabled="true"
+             app:layout_constraintEnd_toEndOf="parent"
+
+             app:layout_constraintStart_toStartOf="@+id/guideline"
+             app:layout_constraintTop_toBottomOf="@+id/text_header"
+             />-->
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_date"
+            app:layout_constraintRight_toLeftOf="@+id/edit_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_date" />
+
+        <TextView
+            android:id="@+id/edit_date"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="Date"
+            app:fontFamily="sans-serif"
+            android:paddingLeft="@dimen/_4sdp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/text_header"
+            />
+        <View
+            android:id="@+id/date_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:background="@color/text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_date"/>
+        <TextView
+            android:id="@+id/txt_rfino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RFI Number"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_rfino"
+            app:layout_constraintRight_toLeftOf="@+id/edit_rfino"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_rfino" />
+
+        <EditText
+            android:id="@+id/edit_rfino"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="RFI Number"
+            android:textColor="@color/text_color"
+
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/date_line" />
+
+        <TextView
+            android:id="@+id/txt_repo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REPORT Number"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_reportno"
+            app:layout_constraintRight_toLeftOf="@+id/edit_reportno"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_reportno" />
+
+        <EditText
+            android:id="@+id/edit_reportno"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="Report Number"
+            android:textColor="@color/text_color"
+
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_rfino" />
+        <TextView
+            android:id="@+id/txt_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_from"
+            app:layout_constraintRight_toLeftOf="@+id/edit_from"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_from" />
+
+        <EditText
+            android:id="@+id/edit_from"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="From"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_reportno" />
+        <TextView
+            android:id="@+id/txt_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_to"
+            app:layout_constraintRight_toLeftOf="@+id/edit_to"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_to" />
+
+        <EditText
+            android:id="@+id/edit_to"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="To"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_from" />
+        <TextView
+            android:id="@+id/txt_dpr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Progress"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_dpr"
+            app:layout_constraintRight_toLeftOf="@+id/edit_dpr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_dpr" />
+
+        <TextView
+            android:id="@+id/edit_dpr"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="Daily Progress Report"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_to" />
+
+        <TextView
+            android:id="@+id/txt_chaingefrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chainage From"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_chaingefrom"
+            app:layout_constraintRight_toLeftOf="@+id/edit_chaingefrom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_chaingefrom" />
+
+        <EditText
+            android:id="@+id/edit_chaingefrom"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="Chainage From"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_dpr" />
+
+        <TextView
+            android:id="@+id/txt_chaingeto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chainage To"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_chainageto"
+            app:layout_constraintRight_toLeftOf="@+id/edit_chainageto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_chainageto" />
+
+        <EditText
+            android:id="@+id/edit_chainageto"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="Chainage To"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:inputType="numberDecimal"
+            android:textColor="@color/text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_chaingefrom" />
+        <TextView
+            android:id="@+id/txt_alignment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alignment No"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/spin_alignment"
+            app:layout_constraintRight_toLeftOf="@+id/spin_alignment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/spin_alignment" />
+        <Spinner
+            android:id="@+id/spin_alignment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_chainageto"
+            />
+
+        <!-- <Spinner
+          android:id="@+id/spin_alignment"
+             android:layout_width="@dimen/_100sdp"
+             android:layout_height="@dimen/_100sdp"
+             android:layout_marginTop="@dimen/_5sdp"
+
+             android:gravity="center"
+
+
+
+             app:fontFamily="sans-serif"
+             android:prompt="@string/select_align"
+
+             app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/edit_chainageto" />-->
+
+
+        <TextView
+            android:id="@+id/txt_surveycheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Survey Check"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_surveycheck"
+            app:layout_constraintRight_toLeftOf="@+id/edit_surveycheck"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_surveycheck" />
+
+        <CheckBox
+            android:id="@+id/edit_surveycheck"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="Survey Check"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/spin_alignment" />
+        <TextView
+            android:id="@+id/txt_markerpost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marker Post"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_markerpost"
+            app:layout_constraintRight_toLeftOf="@+id/edit_markerpost"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_markerpost" />
+
+        <CheckBox
+            android:id="@+id/edit_markerpost"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="Marker Post"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_surveycheck" />
+        <TextView
+            android:id="@+id/txt_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ROW(Width)"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_row"
+            app:layout_constraintRight_toLeftOf="@+id/edit_row"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_row" />
+
+        <EditText
+            android:id="@+id/edit_row"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="ROW"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_markerpost" />
+
+
+
+        <TextView
+            android:id="@+id/txt_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance Cleared"
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_distance"
+            app:layout_constraintRight_toLeftOf="@+id/edit_distance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_distance" />
+
+        <TextView
+            android:id="@+id/edit_distance"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="Distance Cleared "
+            android:textSize="@dimen/_12sdp"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_row" />
+        <View
+            android:id="@+id/distance_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:background="@color/text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/edit_distance"/>
+        <TextView
+            android:id="@+id/txt_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remark"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_remark"
+            app:layout_constraintRight_toLeftOf="@+id/edit_remark"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_remark" />
+
+        <EditText
+            android:id="@+id/edit_remark"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center|left"
+            android:hint="Remark "
+            app:fontFamily="sans-serif"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="text"
+            android:textColor="@color/text_color"
+            android:imeOptions="actionDone"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/distance_line" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_100sdp" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+
+            android:text="Add"
+            app:fontFamily="sans-serif"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_remark" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+    <!-- <ImageView
+             android:id="@+id/close"
+             android:layout_width="wrap_content"
+             android:layout_height="@dimen/_35sdp"
+             android:layout_marginRight="@dimen/_5sdp"
+             android:padding="@dimen/_5sdp"
+             android:src="@drawable/ic_close_black_24dp"
+             app:layout_constraintEnd_toEndOf="parent"
+             android:contentDescription="TODO" />-->
+    <!--  <TextView
+              android:id="@+id/txt_section_length"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Section Length"
+              android:textColor="@color/text_color"
+              android:textSize="@dimen/_12sdp"
+              app:layout_constraintBottom_toBottomOf="@+id/edit_section_length"
+              app:layout_constraintRight_toLeftOf="@+id/edit_section_length"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="@+id/edit_section_length" />
+
+          <EditText
+              android:id="@+id/edit_section_length"
+              android:layout_width="0dp"
+              android:layout_height="@dimen/_40sdp"
+              android:gravity="center|left"
+              android:hint="Section Length"
+              android:textSize="@dimen/_12sdp"
+              app:fontFamily="sans-serif"
+              android:textColor="@color/text_color"
+              android:inputType="numberDecimal"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="@+id/guideline"
+              app:layout_constraintTop_toBottomOf="@+id/edit_chainageto" />-->
+
+    <!-- <Spinner
+          android:id="@+id/spin_alignment"
+
+
+          android:textSize="@dimen/_12sdp"
+          android:textColor="@color/text_color"
+          android:layout_width="0dp"
+          android:layout_height="@dimen/_25sdp"
+          android:layout_marginTop="@dimen/_5sdp"
+
+          android:gravity="center"
+          android:prompt="@string/select_align"
+
+          app:fontFamily="sans-serif"
+
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="@+id/guideline"
+          app:layout_constraintTop_toBottomOf="@+id/edit_chainageto" />-->

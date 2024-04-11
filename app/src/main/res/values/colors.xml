@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#AA303F9F</color>
+
+    <color name="sky_blue">#87CEEB</color>
+    <color name="fade_color">#33303F9F</color>
+    <color name="btn_fade_color">#80303F9F</color>
+    <color name="header_color">#AA303F9F</color>
+    <color name="text_color">#e6222222</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_gray">#AA000000</color>
+</resources>

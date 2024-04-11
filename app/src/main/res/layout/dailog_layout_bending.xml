@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="@dimen/_300sdp"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:fontFamily="sans-serif-bold"
+        android:gravity="center"
+        android:hint="Bending Details"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="@android:color/black" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:background="#f3f8fe"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:text="Report No."
+                    android:inputType="textCapWords"
+                    android:layout_weight=".5"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/txtReportNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:hint="txtReportNo"
+                    android:inputType="textCapWords"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:text="Chainage"
+                    android:inputType="textCapWords"
+                    android:layout_weight=".5"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/txtChainage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:hint="Chainage"
+                    android:inputType="textCapWords"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#f3f8fe"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:text="Pipe No."
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtPipeNo"
+                    android:layout_weight=".5"
+                    android:hint="ChainageTo"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Bend Type"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/bendType"
+                    android:hint="Bend Type"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#f3f8fe"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="TP No."
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtTPNo"
+                    android:hint="Created Date"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Bend Degree"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtBendDegree"
+                    android:hint=""
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#f3f8fe"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Bend Minute"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtBendMin"
+                    android:hint=""
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Bend Second"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtBendSec"
+                    android:hint=""
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#f3f8fe"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Visual Inspection"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtVisualCheck"
+                    android:hint=""
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Gauging Check"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtGuaging"
+                    android:hint=""
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#f3f8fe"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Disbonding Check"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtDisbendingSec"
+                    android:hint=""
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ovality Check"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtOvalityCheck"
+                    android:hint=""
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#f3f8fe"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Holiday Check"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtHolidayCheck"
+                    android:hint=""
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Remark"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtRemark"
+                    android:hint=""
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:text="Apply"
+                android:visibility="gone"
+                android:fontFamily="sans-serif-light"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/btnSmbmit"
+                android:background="@android:color/holo_green_dark"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgCancel"
+        android:layout_gravity="right"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"/>
+
+
+</FrameLayout>

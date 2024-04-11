@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="unistal.com.idpl_pcms">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iocl"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:replace="android:icon">
+        <activity
+            android:name=".ConcreteCoatingQCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SoilResistivityQCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConcreteCoatingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SoilResistivityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LPTQCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LPTActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeldRepairQCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeldRepairActivity"
+            android:exported="false" />
+        <activity
+            android:name=".stringing.Stringing2ndActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity android:name=".RowFormActivity2" />
+        <activity android:name=".NewRowFormActivity" />
+        <activity android:name=".hydrotest.Hydrotest_QC" />
+        <activity android:name=".levelling.LevelingQC" />
+        <activity android:name=".ut.UT_QCActivity" />
+        <activity android:name=".levelling.LevellingActivity" />
+        <activity android:name=".ut.UTActivity" />
+        <activity android:name=".welding.WeldingQCActivity" />
+        <activity android:name=".welding.WeldingActivity" />
+        <activity android:name=".stringing.StringingQCActivity" />
+        <activity android:name=".clearing_and_grading.ClearingandGradingQCActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".stringing.StringingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".HindranceUpdateActivity" />
+        <activity android:name=".HindranceListActivity" />
+        <activity android:name=".HindranceActivity" />
+        <activity android:name=".QCHomeActivity" />
+        <activity android:name=".BarCodeReaderActivity" />
+        <activity android:name=".qc.ROU_QC" />
+        <activity android:name=".qc.ROWay_QC" />
+        <activity android:name=".backfiling.BackfillingInputForm" />
+        <activity android:name=".backfiling.BackFillingQC" />
+        <activity android:name=".clearing_and_grading.ClearingGrading2Activity" />
+        <activity android:name=".hdpe.HDPE_QC">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:exported="false" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".hdpe.HDPE_InputForm">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:exported="false" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:exported="true" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".joint_coating.JointCoatingQC">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:exported="true" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".joint_coating.JoinCoatingInputForm">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:exported="true" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".lowering.Lowering_QC">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:exported="true" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".lowering.LoweringInputForm">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:exported="true" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".rou.ROU_QC">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:exported="true" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity> <!-- <activity android:name=".rou.ROU_InputForm"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity android:name=".radio_graphy.RadiographyQC" />
+        <activity android:name=".radio_graphy.RadioGraphyInput" />
+        <activity android:name=".hydrotest.PrehydroTestInput" />
+        <activity android:name=".bending.BendingQC" />
+        <activity android:name=".bending.BendingFormActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:exported="true" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".trenching.qc.TrenchingQC" />
+        <activity android:name=".trenching.TrenchingActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:exported="true" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".qc.QCContractorROW" />
+        <activity android:name=".ofc.OFC_QC" />
+        <activity android:name=".ofc.OFCBlowingInputForm" />
+        <activity android:name=".form.ROWForm" />
+        <activity android:name=".rou.ROU_InputForm">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:exported="true" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="unistal.com.idpl_pcms.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_list" />
+        </provider> <!-- <action android:name="android.net.ConnectivityManager.CONNECTIVITY_ACTION" /> -->
+        <receiver android:name=".receiver.SensorRestarterBroadcastReceiver" />
+        <receiver
+            android:name=".NetworkStateReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.NotifyService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":com.app.mbpl.service.NotifyService" />
+    </application>
+
+</manifest>

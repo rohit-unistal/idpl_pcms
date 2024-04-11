@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QCHomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/rel_header_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/fade_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="NMPPL_pcms Mobility"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp"
+            app:fontFamily="sans-serif" />
+
+        <ImageView
+            android:id="@+id/txtMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_more_vert_black_24dp"
+            android:contentDescription="TODO" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/iocl"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rel_header_container"
+        android:contentDescription="TODO" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            >
+            <!-- have whatever children you want inside -->
+
+            <LinearLayout
+                android:id="@+id/relroute_survey"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:gravity="center"
+                        android:text="Row Survey"
+                        android:visibility="visible"
+                        android:textSize="@dimen/_16sdp"
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotification"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relroute_handover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relroute_survey">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:text="Route HandOver"
+                        android:textSize="@dimen/_16sdp"
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifyhand"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/relclear_greading"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/relroute_handover">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="Clearing &amp; Grading"
+                        android:textSize="@dimen/_16sdp"
+                        app:fontFamily="sans-serif"
+
+                        />
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifycng"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/reltrenching"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relclear_greading">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:background="@drawable/button_focused"
+                        android:gravity="center"
+                        android:text="Trenching"
+                        android:visibility="visible"
+                        android:textSize="@dimen/_16sdp"
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifytrench"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relStringing"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reltrenching" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="Stringing"
+                        android:textSize="@dimen/_16sdp"
+
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifystring"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relbending"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relStringing" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+
+                        android:text="Bending"
+                        android:textSize="@dimen/_16sdp"
+                        app:fontFamily="sans-serif"
+                        />
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifybend"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relWelding"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relbending">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="Welding"
+                        android:textSize="@dimen/_16sdp"
+
+                        app:fontFamily="sans-serif"
+                        />
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifyWeld"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relWeldRepair"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relWelding">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="Weld Repair"
+                        android:textSize="@dimen/_16sdp"
+
+                        app:fontFamily="sans-serif"
+                        />
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifyWeldRepair"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relradiography"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relWeldRepair">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="Radiography"
+                        android:textSize="@dimen/_16sdp"
+
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifyradio"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relUT"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relradiography" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="UT"
+                        android:textSize="@dimen/_16sdp"
+
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifyut"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relJointCoating"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relUT"  >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="JointCoating"
+                        android:textSize="@dimen/_16sdp"
+
+                        app:fontFamily="sans-serif"
+                        />
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifyjoint"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relbackfiling"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relJointCoating" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:text="Backfiling"
+                        android:textSize="@dimen/_16sdp"
+
+                        app:fontFamily="sans-serif" />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifyback"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relLowering"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relbackfiling">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="Lowering"
+                        android:textSize="@dimen/_16sdp"
+
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifylower"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relLeveling"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relLowering">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="Leveling"
+                        android:textSize="@dimen/_16sdp"
+
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifylevel"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relLpt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/relLeveling">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="LPT"
+                        android:textSize="@dimen/_16sdp"
+
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifylpt"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relHydroTest"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relLpt">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="HydroTest"
+                        android:textSize="@dimen/_16sdp"
+
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifyhydrotest"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relHDPE"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relHydroTest">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:background="@drawable/button_focused"
+                        android:gravity="center"
+                        android:text="HDPE "
+                        android:textSize="@dimen/_16sdp"
+                        android:visibility="visible"
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifyhdpe"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relSoilResistivity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relHDPE">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="Soil Resistivity"
+                        android:textSize="@dimen/_16sdp"
+                        android:visibility="visible"
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifysoil"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relConcreteCoating"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relSoilResistivity">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="Concrete Coating"
+                        android:textSize="@dimen/_16sdp"
+                        android:visibility="visible"
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifyconcrete"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relOFCBlowing"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:background="@drawable/button_focused"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relConcreteCoating">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+
+                        android:gravity="center"
+                        android:text="OFC Blowing"
+                        android:textSize="@dimen/_16sdp"
+                        android:visibility="visible"
+                        app:fontFamily="sans-serif"
+                        />
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/txtNotifyofc"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/notification_round"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

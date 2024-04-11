@@ -1,0 +1,37 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/IDPL_Projects/IDPL_PCMS/app/src/main/res/layout/activity_home.xml" value="0.1647921760391198" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/drawable/btn_drawable.xml" value="0.1" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_backfilling_input_form.xml" value="0.181529924692826" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_bending_form.xml" value="0.1514070550931431" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_hdpe__input_form.xml" value="0.181529924692826" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_levelling.xml" value="0.1902497027348395" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_lowering_input_form.xml" value="0.1514070550931431" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_new_row_form.xml" value="0.1514070550931431" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_qchome.xml" value="0.1" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_rou__input_form.xml" value="0.13991280221957986" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_rou__qc.xml" value="0.1" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_row_form2.xml" value="0.1514070550931431" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_roway__qc.xml" value="0.1" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_stringing.xml" value="0.1" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_trenching.xml" value="0.181529924692826" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/activity_welding.xml" value="0.12405866032500991" />
+        <entry key="..\:/NMPPLProjects/NMPPL_PCMS/app/src/main/res/layout/clearing_and_grading.xml" value="0.1514070550931431" />
+        <entry key="..\:/PNCPLProjects/PNCPL_PCMS/app/src/main/res/layout/activity_home.xml" value="0.12360688956433637" />
+        <entry key="..\:/PNCPLProjects/PNCPL_PCMS/app/src/main/res/layout/activity_levelling.xml" value="0.1" />
+        <entry key="..\:/PNCPLProjects/PNCPL_PCMS/app/src/main/res/layout/activity_new_row_form.xml" value="0.1" />
+        <entry key="..\:/PNCPLProjects/PNCPL_PCMS/app/src/main/res/layout/activity_trenching.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="ibm-1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="@dimen/_300sdp"
+    android:padding="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/txtReportNo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:fontFamily="sans-serif-bold"
+        android:gravity="center"
+        android:hint="Report Number"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="@android:color/black" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical"
+                    android:text="Chainage From"
+                    android:inputType="textCapWords"
+                    android:layout_weight=".5"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:id="@+id/txtChainageFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:hint="Chainage From"
+                    android:inputType="textCapWords"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:text="Chainage To"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtChainageTo"
+                    android:layout_weight=".5"
+                    android:hint="ChainageTo"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="ROU Length"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rouLength"
+                    android:hint="ROU Length"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="ROW Date"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rouCreatedDate"
+                    android:hint="Created Date"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="40dp"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Alignment Sheet"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txtAlignment_Sheet"
+                    android:hint="Alignment Sheet"
+                    android:layout_weight=".5"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:text="Apply"
+                android:visibility="gone"
+                android:fontFamily="sans-serif-light"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:id="@+id/btnSmbmit"
+                android:background="@android:color/holo_green_dark"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgCancel"
+        android:layout_gravity="right"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"/>
+
+
+</FrameLayout>
